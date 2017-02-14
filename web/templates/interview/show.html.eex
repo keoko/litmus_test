@@ -1,0 +1,13 @@
+<h2>Show interview</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @interview.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: interview_path(@conn, :edit, @interview) %>
+<%= link "Back", to: interview_path(@conn, :index) %>
