@@ -69,4 +69,18 @@ defmodule LitmusTest.InterviewController do
     :crypto.strong_rand_bytes(length) |> Base.url_encode64 |> binary_part(0, length)
   end
 
+  def apply(conn, %{"name" => name}) do
+    query = from from i in LitmusTest.Interview, where: i.name == ^name
+    interviews = LitmusTest.Repo.all(query)
+    case interviews do
+      [interview|_] ->
+        changeset = Interview.changeset(interview)
+        render(conn, "edit.html", interview: interview, changeset: changeset)
+      _ ->
+        conn
+        |> put_status(:not_found)
+        |> render(LitmusTest.ErrorView, "404.html")
+    end
+  end
+
 end

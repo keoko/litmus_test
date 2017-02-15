@@ -24,6 +24,14 @@
       </main>
 
     </div> <!-- /container -->
-
+    <div id="footer" class="page">
+        <p>&copy; 2017 Interview Zen</p>
+        <ul>
+            <li>
+                <a href="mailto:support@interviewzen.com">support@interviewzen.com</a>
+            </li>
+        </ul>
+        <div class="clear"></div>
+    </div>
   </body>
 </html>

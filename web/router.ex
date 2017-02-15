@@ -18,6 +18,7 @@ defmodule LitmusTest.Router do
 
     get "/", PageController, :index
     get "/create", InterviewController, :new
+    get "/apply/:name", InterviewController, :apply
     resources "/interviews", InterviewController
   end
 
