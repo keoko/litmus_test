@@ -1,26 +1,2 @@
-<h2>Listing interviews</h2>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for interview <- @interviews do %>
-    <tr>
-      <td><%= interview.name %></td>
-
-      <td class="text-right">
-        <%= link "Show", to: interview_path(@conn, :show, interview), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: interview_path(@conn, :edit, interview), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: interview_path(@conn, :delete, interview), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
-
-<%= link "New interview", to: interview_path(@conn, :new) %>
+<div id="header"><div class="page"><!--[if lt IE 7]><p class="chromeframe ie6">Sorry, we don't support Internet Explorer 6! Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]--><a href="/" class="logo">Interview Zen</a><ul><li class=""><a href="/" id="home">Home</a></li><li class=""><a href="/create/">Create an
+    Interview</a></li></ul><div class="clear"></div></div></div><div id="page"><div class="top"></div><div class="content"><div class="header page"><h1>Dashboard</h1></div><div id="dashboard" class="padding"><div id="dashboard_info"><p>This is your interview dashboard. When a candidate completes an interview, their response will automatically show up below. Share this page with colleagues and evaluate responses together.</p><p><b>Invite candidates by sending them your interview link or add it to a job posting and let them come to you.</b></p><p><b>Interview link:</b><span class="highlight_light"><a href="https://www.interviewzen.com/apply/9JVXVr">https://www.interviewzen.com/apply/9JVXVr</a></span></p></div><div id="responses"><div class="section_title"><h3>Responses</h3></div><p>No responses yet. Start by sending the interview link above to your candidates.</p><div class="clear"></div></div></div></div><div class="bottom"></div></div><div id="footer" class="page"><p>&copy; 2017 Interview Zen</p><ul><li><a href="mailto:support@interviewzen.com">support@interviewzen.com</a></li></ul><div class="clear"></div></div>
