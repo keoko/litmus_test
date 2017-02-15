@@ -20,10 +20,9 @@ defmodule LitmusTest.InterviewController do
     changeset = Interview.changeset(%Interview{}, interview_params)
 
     case Repo.insert(changeset) do
-      {:ok, _interview} ->
+      {:ok, interview} ->
         conn
-        |> put_flash(:info, "Interview created successfully.")
-        |> redirect(to: interview_path(conn, :index))
+        |> redirect(to: interview_path(conn, :show, interview))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end

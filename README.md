@@ -20,7 +20,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Source: https://github.com/phoenixframework/phoenix
   
 ## Todo
-
-  * header and footer
-  * return page with link 
+  * fix ZV CSS and JS
+  * header and footer snippets
   * list of questions
+  * apply link
