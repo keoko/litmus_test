@@ -1,4 +1,5 @@
 defmodule LitmusTest.InterviewController do
+  require Logger
   use LitmusTest.Web, :controller
 
   alias LitmusTest.Interview
@@ -13,7 +14,9 @@ defmodule LitmusTest.InterviewController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"interview" => interview_params}) do
+  def create(conn, _interview) do
+    interview_params = %{name: random_string(10)}
+    Logger.debug "params: #{inspect(interview_params)}"
     changeset = Interview.changeset(%Interview{}, interview_params)
 
     case Repo.insert(changeset) do
@@ -62,4 +65,9 @@ defmodule LitmusTest.InterviewController do
     |> put_flash(:info, "Interview deleted successfully.")
     |> redirect(to: interview_path(conn, :index))
   end
+
+  def random_string(length) do
+    :crypto.strong_rand_bytes(length) |> Base.url_encode64 |> binary_part(0, length)
+  end
+
 end

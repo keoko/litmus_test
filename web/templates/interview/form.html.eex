@@ -5,13 +5,19 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= label f, :name, class: "control-label" %>
-    <%= text_input f, :name, class: "form-control" %>
-    <%= error_tag f, :name %>
-  </div>
+  <div id="create_question"><div class="section_title"><h3>Your Questions</h3></div>
 
-  <div class="form-group">
-    <%= submit "Submit", class: "btn btn-primary" %>
-  </div>
+      <!-- form id="questions_form" action="/create/" method="post"><div id="question_list" -->
+
+      <div class="question"><textarea class="question_text_field" cols="40" id="id_question-0-content" name="question-0-content" rows="10"></textarea><label class="question_label">Question</label><div class="delete_question"><a href="#">Delete</a></div><div class="clear"></div></div></div><a href="#" class="add_question">Add another question</a><div class="send_form">
+
+          <input id="id_question-TOTAL_FORMS" name="question-TOTAL_FORMS" type="hidden" value="1" /><input id="id_question-INITIAL_FORMS" name="question-INITIAL_FORMS" type="hidden" value="0" /><input id="id_question-MIN_NUM_FORMS" name="question-MIN_NUM_FORMS" type="hidden" value="0" /><input id="id_question-MAX_NUM_FORMS" name="question-MAX_NUM_FORMS" type="hidden" value="1000" /><input type='hidden' name='csrfmiddlewaretoken' value='gqrmpfPD8pZPz6jr7uYIe1bACHQtxpMg' />
+          <!-- a href="#" class="button submit"><span>Save and Invite Candidates</span></a -->
+    <%= submit "Save and Invite Candidates", class: "btn btn-primary button submit" %>
+      </div>
+      <!-- /form -->
+
+      <div class="clear"></div></div></div></div>
+
 <% end %>
+
