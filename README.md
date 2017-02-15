@@ -24,3 +24,4 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * header and footer snippets
   * list of questions
   * apply link
+  * build URL with interview_path function in interview created page.
