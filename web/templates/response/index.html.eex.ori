@@ -1,0 +1,28 @@
+<h2>Listing responses</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for response <- @responses do %>
+    <tr>
+      <td><%= response.name %></td>
+      <td><%= response.email %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: response_path(@conn, :show, response), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: response_path(@conn, :edit, response), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: response_path(@conn, :delete, response), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New response", to: response_path(@conn, :new) %>

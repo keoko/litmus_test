@@ -75,7 +75,7 @@ defmodule LitmusTest.InterviewController do
     case interviews do
       [interview|_] ->
         changeset = Interview.changeset(interview)
-        render(conn, "edit.html", interview: interview, changeset: changeset)
+        render(conn, "apply.html", interview: interview, changeset: changeset)
       _ ->
         conn
         |> put_status(:not_found)

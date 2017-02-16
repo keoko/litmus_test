@@ -1,0 +1,18 @@
+<h2>Show response</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @response.name %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @response.email %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: response_path(@conn, :edit, @response) %>
+<%= link "Back", to: response_path(@conn, :index) %>

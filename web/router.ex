@@ -18,8 +18,9 @@ defmodule LitmusTest.Router do
 
     get "/", PageController, :index
     get "/create", InterviewController, :new
-    get "/apply/:name", InterviewController, :apply
+    get "/apply/:name", ResponseController, :index
     resources "/interviews", InterviewController
+    resources "/responses", ResponseController
   end
 
   # Other scopes may use custom stacks.

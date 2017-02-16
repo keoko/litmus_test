@@ -1,0 +1,37 @@
+<div id="header"><div class="page"><!--[if lt IE 7]><p class="chromeframe ie6">Sorry, we don't support Internet Explorer 6! Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]--><a href="/" class="logo">Interview Zen</a><div class="clear"></div></div></div><div id="page"><div class="top"></div><div class="content"><div class="header page" xmlns="http://www.w3.org/1999/html"><h1>Welcome</h1></div><div id="apply" class="padding"><div id="apply_info"><p>You are about to take an online technical interview.</p><p>In this interview, you will be shown a number of questions and asked to answer each one in turn. Your
+    answers will be stored online for you and your interviewer to view once you've finished.</p><p>It's not just your final answer that's important - it's how you get there. Your interviewer will be
+    able to see your answer unfold as if they were sitting at the keyboard next to you. They're more
+    interested in your thought process and method than if you dropped a semicolon somewhere.</p><p>When you're ready, enter your details below and click Start to begin. You'll be able to see all of
+    your answers at the end.</p><p>Best of luck!</p><div class="section_title"><h3>An Example</h3></div><p>Let's say you were asked the following question:</p><blockquote>Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz"
+    instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of
+    both three and five print "FizzBuzz".</blockquote><p>You would type your solution into the textbox and hit Submit when you're happy with it. You and your
+    interviewer would then see something like this:</p><div id="answer_6vp6" class="answer"><div class="player"><pre class="prettyprint">&quot;&quot;&quot;
+x mod 3 = Fizz
+x mod 5 = Buzz
+x mod 15 = FizzBuzz
+else print x
+&quot;&quot;&quot;
+
+for x in range(1,101):
+    if x % 15 == 0:
+        print &quot;FizzBuzz&quot; # Catch multiples of both first.
+    elif x % 3 == 0:
+        print &quot;Fizz&quot;
+    elif x % 5 == 0:
+        print &quot;Buzz&quot;
+    else:
+        print x</pre></div><div class="toolbar ui-widget-header ui-corner-all"><div class="player_timer"><span class="current_time">0:00</span> / 1:33
+        </div><input type="text" id="slider_6vp6"
+                     class="fd_slider fd_jump fd_range_0_94000 fd_inc_100 fd_tween fd_slider_cb_move_zenSliderMoveHandler fd_slider_cb_update_zenSliderUpdateHandler"
+                     style="display: none" value="0"/><button class="play">play</button><span class="player_speed"><label for="speed_1x_6vp6">1x</label><input type="radio"
+                                                                                                                                                               id="speed_1x_6vp6"
+                                                                                                                                                               value="1"
+                                                                                                                                                               name="speed_6vp6"/><label for="speed_2x_6vp6">2x</label><input type="radio"
+                                                                                                                                                                                                                              id="speed_2x_6vp6"
+                                                                                                                                                                                                                              value="2"
+                                                                                                                                                                                                                              name="speed_6vp6"/><label for="speed_5x_6vp6">5x</label><input type="radio"
+                                                                                                                                                                                                                                                                                             id="speed_5x_6vp6"
+                                                                                                                                                                                                                                                                                             value="5"
+                                                                                                                                                                                                                                                                                             name="speed_6vp6"
+                                                                                                                                                                                                                                                                                             checked="checked"/></span></div></div><div class="clear"></div></div><div id="apply_form"><div class="section_title"><h3>Your Details</h3></div><form action="/apply/9KbtgR" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='o9FCHcyWaohq38LYk1KpmnAWN38QnztE' /><p><label for="id_name">Name</label><input type="text" name="name" id="id_name" class="text_field"/></p><div class="clear"></div><p><label for="id_email">Email (optional)</label><input type="text" name="email" id="id_email"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            class="text_field"/></p><div class="clear"></div><div class="send_form"><a href="#" class="button submit"><span>Start the Interview</span></a></div></form><div class="clear"></div></div></div></div><div class="bottom"></div></div>
