@@ -9,15 +9,15 @@ defmodule LitmusTest.ResponseController do
     interviews = LitmusTest.Repo.all(query)
     case interviews do
       [interview|_] ->
-        changeset = Interview.changeset(interview)
-        render(conn, "index.html", interview: interview, changeset: changeset)
+        response = %Response{id: 1}
+        #changeset = Interview.changeset(interview)
+        changeset = Response.changeset(%Response{id: 1})
+        render(conn, "index.html", interview: interview, changeset: changeset, response: response)
       _ ->
         conn
         |> put_status(:not_found)
         |> render(LitmusTest.ErrorView, "404.html")
     end
-    responses = Repo.all(Response)
-    render(conn, "index.html", responses: responses)
   end
 
   def new(conn, _params) do
