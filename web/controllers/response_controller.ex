@@ -9,15 +9,20 @@ defmodule LitmusTest.ResponseController do
     interviews = LitmusTest.Repo.all(query)
     case interviews do
       [interview|_] ->
-        response = %Response{id: 1}
         #changeset = Interview.changeset(interview)
-        changeset = Response.changeset(%Response{id: 1})
-        render(conn, "index.html", interview: interview, changeset: changeset, response: response)
+        #response = %Response{id: 1}
+        #changeset = Response.changeset(%Response{id: 1})
+        changeset = Response.changeset(%Response{})
+        render(conn, "index.html", interview: interview, changeset: changeset)
       _ ->
         conn
         |> put_status(:not_found)
         |> render(LitmusTest.ErrorView, "404.html")
     end
+  end
+
+  def question(conn, _params) do
+    render(conn, "question.html", changeset: %{})
   end
 
   def new(conn, _params) do
@@ -32,7 +37,7 @@ defmodule LitmusTest.ResponseController do
       {:ok, _response} ->
         conn
         |> put_flash(:info, "Response created successfully.")
-        |> redirect(to: response_path(conn, :index))
+        |> redirect(to: response_path(conn, :question))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end

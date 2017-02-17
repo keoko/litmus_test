@@ -37,6 +37,6 @@ for x in range(1,101):
 
 
 <%= render "form.html", changeset: @changeset,
-                        action: response_path(@conn, :create, @response) %>
+                        action: response_path(@conn, :create) %>
 
             <div class="clear"></div></div></div></div><div class="bottom"></div></div>

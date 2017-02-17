@@ -1,0 +1,13 @@
+<h2>Show solution</h2>
+
+<ul>
+
+  <li>
+    <strong>Answer:</strong>
+    <%= @solution.answer %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: solution_path(@conn, :edit, @solution) %>
+<%= link "Back", to: solution_path(@conn, :index) %>
