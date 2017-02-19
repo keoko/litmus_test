@@ -28,11 +28,12 @@ defmodule LitmusTest.Router do
     # get / -> home page
     # get /create -> :new interview
     # post /create -> :create interview
-    # get /apply/:name -> :new solution
-    # post /apply/:name -> :create solution
+    # get /apply/:name -> :new solution (user + password)
+    # post /apply/:name -> :create solution (user + password)
     # get /question/:name -> :show questions
     #
     # /interview/:name -> show questions + answers
+    # post /record/:name -> 
   end
 
   # Other scopes may use custom stacks.

@@ -11,7 +11,7 @@
 //
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
-import "phoenix_html"
+// import "phoenix_html"
 
 // Import local files
 //
@@ -2647,3 +2647,4 @@ function updateQuestionIndices(el,ndx,offset){if(offset){ndx+=(num_questions+1);
 var id_regex=new RegExp("(question-\\d+)");var replacement="question-"+ndx;el.find("input,select,textarea,label,a").each(function(){if($(this).attr("for")){$(this).attr("for",$(this).attr("for").replace(id_regex,replacement));}
 if(this.id){this.id=this.id.replace(id_regex,replacement);}
 if(this.name){this.name=this.name.replace(id_regex,replacement);}});};
+

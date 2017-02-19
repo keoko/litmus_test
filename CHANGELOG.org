@@ -1,0 +1,3 @@
+* ChangeLog
+** init project
+mix phoenix.new litmus_test
